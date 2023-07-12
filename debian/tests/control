@@ -1,0 +1,14 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test rustc_version 0.4.0 --all-targets --all-features
+Features: test-name=rust-rustc-version:@
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test rustc_version 0.4.0 --all-targets 
+Features: test-name=librust-rustc-version-dev:default
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test rustc_version 0.4.0 --all-targets --no-default-features
+Features: test-name=librust-rustc-version-dev:
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
